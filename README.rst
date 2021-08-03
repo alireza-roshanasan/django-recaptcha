@@ -80,6 +80,13 @@ Installation
 
 This will change the Google JavaScript api domain as well as the client side field verification domain.
 
+#. you can define RECAPTCHA_BACKEND_ADDRS in your settings to change default recaptcha api domain :
+
+    .. code-block:: python
+
+        RECAPTCHA_BACKEND_ADDRS = 'https://www.recaptcha.net'
+
+
 Usage
 -----
 

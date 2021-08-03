@@ -21,8 +21,8 @@ class RecaptchaResponse(object):
 
 def recaptcha_request(params):
     request_object = Request(
-        url="https://%s/recaptcha/api/siteverify" % getattr(
-            settings, "RECAPTCHA_DOMAIN", DEFAULT_RECAPTCHA_DOMAIN
+        url="%s/recaptcha/api/siteverify" % getattr(
+            settings, "RECAPTCHA_BACKEND_ADDRS", f"https://{DEFAULT_RECAPTCHA_DOMAIN}"
         ),
         data=params,
         headers={
